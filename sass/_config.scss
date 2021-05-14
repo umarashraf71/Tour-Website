@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+$white-color: #fff;
+$light-green-color: #0dc249;
+$green-color: #0a9138;
+$dark-green-color: #053311;
+$black-color: #111;
+
+* {
+  font-family: "Poppins", sans-serif !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+$font-weights: (
+  "light": 200,
+  "thin": 300,
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+  "extra-bold": 800,
+  "heavy": 900,
+);
+
+@function weight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin media-x-lg {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (max-width: 850px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

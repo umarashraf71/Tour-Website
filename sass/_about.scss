@@ -1,0 +1,83 @@
+.about {
+
+ margin-top: 40px; 
+
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .col50 {
+    position: relative;
+    width: 48%;
+
+    .title-text {
+      color: $black-color;
+      font-size: 2em;
+      font-weight: weight("thin");
+
+      span {
+        color: $green-color;
+        font-size: 1.5em;
+        font-weight: weight("semi-bold");
+      }
+    }
+
+    .imgBx {
+      position: relative;
+      width: 100%;
+      max-height: 300px;
+      overflow: hidden;
+      opacity: 1;
+      transition: opacity 0.5s !important;
+      box-shadow: 0 5px 35px rgba(0,0,0,0.8);
+      border: 1px solid $green-color;
+
+      &::after {
+        position: absolute;
+        content: "About Us";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        text-transform: uppercase;
+        font-weight: weight("medium");
+        word-spacing: 8px;
+        color: $white-color;
+        letter-spacing: 1px;
+        z-index: 10;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s !important;
+      }
+
+      img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        @include transition-ease;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+          background: linear-gradient(rgba($green-color, 0.6));
+          transition: opacity 0.5s !important;
+        }
+
+        img {
+          @include transition-ease;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+}

@@ -1,0 +1,49 @@
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba($dark-green-color,0.9), rgba(0,0,0,0.8)) ,url("../img/banner.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+  .content {
+    max-width: 900px;
+    text-align: center;
+
+    h2 {
+      font-size: 4em;
+      color: $white-color;
+      font-weight: weight('semi-bold');
+    }
+
+    p {
+      font-size: 1em;
+      color: $white-color;
+    }
+
+    .btn {
+      font-size: 1em;
+      color: $white-color;
+      background-color: $green-color;
+      display: inline-block;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+      margin-top: 20px;
+
+      @include transition-ease;
+
+      &:hover {
+
+        letter-spacing: 6px;
+      }  
+
+
+    }
+    
+  }
+}
